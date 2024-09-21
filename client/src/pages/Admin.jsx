@@ -19,7 +19,7 @@ const UserListTable = () => {
 
   useEffect(() => {
     axios
-      .get("https://cluster-delta.onrender.com/users/getAllUsers")
+      .get("https://cluster-backend.onrender.com/users/getAllUsers")
       .then((response) => {
         setUserList(response.data.users);
         calculateStatistics(response.data.users);
@@ -51,7 +51,7 @@ const UserListTable = () => {
   const handleCheckboxChange = async (userId, isChecked) => {
     try {
 
-      await axios.put(`https://cluster-delta.onrender.com/users/tick/${userId}`, { tick: isChecked });
+      await axios.put(`https://cluster-backend.onrender.com/users/tick/${userId}`, { tick: isChecked });
 
       const updatedUserList = userList.map((user) => {
         if (user._id === userId) {
