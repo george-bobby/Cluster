@@ -100,7 +100,7 @@ const Home = () => {
   //     // Include user information in the request body
   //     formData.append("userId", user._id);
 
-  //     const response = await fetch("https://cluster-backend.onrender.com/posts/create-post", {
+  //     const response = await fetch("https://cluster-delta.onrender.com/posts/create-post", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "multipart/form-data",
@@ -136,8 +136,8 @@ const Home = () => {
 
         // Make a request to fetch posts
         const response = await axios.post(
-          // "https://cluster-backend.onrender.com/posts/"
-          "https://cluster-backend.onrender.com/posts/"
+          // "https://cluster-delta.onrender.com/posts/"
+          "https://cluster-delta.onrender.com/posts/"
         );
 
         if (response.status === 200) {
@@ -200,8 +200,8 @@ const Home = () => {
 
       // Post data to your backend
       const response = await axios.post(
-        "https://cluster-backend.onrender.com/posts/create-post",
-        // "https://cluster-backend.onrender.com/posts/create-post",
+        "https://cluster-delta.onrender.com/posts/create-post",
+        // "https://cluster-delta.onrender.com/posts/create-post",
         postData
       );
 
@@ -246,7 +246,7 @@ const Home = () => {
   //       description: data.description,
   //     };
 
-  //     const response = await axios.post('https://cluster-backend.onrender.com/posts/create-post', postData);
+  //     const response = await axios.post('https://cluster-delta.onrender.com/posts/create-post', postData);
 
   //     if (response.status === 201) {
   //       setDescription("");
