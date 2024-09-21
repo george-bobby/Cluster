@@ -10,18 +10,6 @@ import { CustomButton, Loading, TextInput } from "../components";
 import Bgmain from "../assets/bgmain.png";
 import { UserLogin } from "../redux/userSlice";
 import { FaTimes } from "react-icons/fa";
-// import profile_1 from "../assets/PROFILE/1.png";
-// import profile_2 from "../assets/PROFILE/2.png";
-// import profile_3 from "../assets/PROFILE/3.png";
-// import profile_4 from "../assets/PROFILE/4.png";
-// import profile_5 from "../assets/PROFILE/5.png";
-// import profile_6 from "../assets/PROFILE/6.png";
-// import profile_7 from "../assets/PROFILE/7.png";
-// import profile_8 from "../assets/PROFILE/8.png";
-// import profile_9 from "../assets/PROFILE/9.png";
-// import profile_10 from "../assets/PROFILE/10.png";
-// import profile_11 from "../assets/PROFILE/11.png";
-// import profile_12 from "../assets/PROFILE/12.png";
 
 const Register = () => {
   const {
@@ -40,34 +28,18 @@ const Register = () => {
   const [hostedURL, setHostedURL] = useState("");
   const [selectedImage, setSelectedImage] = useState("");
 
-  // const images = [
-  //   profile_1,
-  //   profile_2,
-  //   profile_3,
-  //   profile_4,
-  //   profile_5,
-  //   profile_6,
-  //   profile_7,
-  //   profile_8,
-  //   profile_9,
-  //   profile_10,
-  //   profile_11,
-  //   profile_12,
-  // ];
-
   const imageUrls = [
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864538/CLUSTER/4_bvss6a.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864538/CLUSTER/1_wa6j8q.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864539/CLUSTER/3_rhzono.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864539/CLUSTER/8_teqjug.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864539/CLUSTER/7_j9h2sr.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864539/CLUSTER/2_xx0yam.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864539/CLUSTER/6_lvbuxr.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864540/CLUSTER/9_qem0gy.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864540/CLUSTER/5_wotsjo.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864540/CLUSTER/11_h1axb3.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864540/CLUSTER/10_duuwsu.png",
-    "https://res.cloudinary.com/tesalab/image/upload/v1709864540/CLUSTER/12_k6sjtd.png",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/9_qem0gy.png?updatedAt=1726898107678",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/8_teqjug.png?updatedAt=1726898105064",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/2_xx0yam.png?updatedAt=1726898105058",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/6_lvbuxr.png?updatedAt=1726898105029",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/3_rhzono.png?updatedAt=1726898105025g",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/1_wa6j8q.png?updatedAt=1726898104970",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/12_k6sjtd.png?updatedAt=1726898105053",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/11_h1axb3.png?updatedAt=1726898105022",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/10_duuwsu.png?updatedAt=1726898105032",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/7_j9h2sr.png?updatedAt=1726898104964",
+    "https://ik.imagekit.io/georgebobby/cluster-pfp/4_bvss6a.png?updatedAt=1726898104891",
   ];
 
   const handleImageSelect = (imageUrl) => {
