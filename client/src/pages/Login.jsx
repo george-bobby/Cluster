@@ -28,7 +28,7 @@ const Login = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await fetch("https://cluster-server.onrender.com/auth/login", {
+      const response = await fetch("https://cluster-delta.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -59,7 +59,7 @@ const Register = () => {
 
   //   try {
   //     const response = await fetch(
-  //       "https://cluster-server.onrender.com/auth/register",
+  //       "https://cluster-delta.onrender.com/auth/register",
   //       {
   //         method: "POST",
   //         headers: {
@@ -105,7 +105,7 @@ const Register = () => {
       };
 
       const response = await fetch(
-        "https://cluster-server.onrender.com/auth/register",
+        "https://cluster-delta.onrender.com/auth/register",
         {
           method: "POST",
           headers: {
@@ -144,7 +144,7 @@ const Register = () => {
   //   setIsSubmitting(true);
 
   //   try {
-  //     const response = await fetch("https://cluster-server.onrender.com/auth/register", {
+  //     const response = await fetch("https://cluster-delta.onrender.com/auth/register", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
