@@ -63,6 +63,3 @@ cluster-delta
    - Currently, no work is required on the `model` folder.
 
 ---
-
-## Support
-For any issues or queries, feel free to reach out in the common group chat or DM.
