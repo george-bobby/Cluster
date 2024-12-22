@@ -19,7 +19,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
     const checkFollowingStatus = async () => {
       try {
         const response = await axios.get(
-          `https://cluster-delta.onrender.com/users/checkFollowing/${loggedInUser}/${user._id}`
+          `http://localhost:8800/users/checkFollowing/${loggedInUser}/${user._id}`
         );
         setIsFollowing(response.data.isFollowing);
       } catch (error) {
@@ -34,7 +34,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
 
   const handleFollow = async () => {
     try {
-      await axios.post("https://cluster-delta.onrender.com/users/follow", {
+      await axios.post("http://localhost:8800/users/follow", {
         followerId: loggedInUser,
         followeeId: user._id,
       });
@@ -48,7 +48,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
 
   const handleUnfollow = async () => {
     try {
-      await axios.post("https://cluster-delta.onrender.com/users/unfollow", {
+      await axios.post("http://localhost:8800/users/unfollow", {
         followerId: loggedInUser,
         followeeId: user._id,
       });
@@ -63,7 +63,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
   const toggleFollowersModal = async () => {
     try {
       const response = await axios.get(
-        `https://cluster-delta.onrender.com/users/followers/${user._id}`
+        `http://localhost:8800/users/followers/${user._id}`
       );
       setFollowers(response.data.followers);
       setShowFollowersModal(!showFollowersModal);
