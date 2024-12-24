@@ -26,7 +26,7 @@ dbConnection();
 app.use(helmet());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:8800",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: false,
