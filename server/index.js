@@ -26,7 +26,7 @@ dbConnection();
 app.use(helmet());
 app.use(
   cors({
-    origin: "https://cluster-delta.onrender.com",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: false,
