@@ -77,7 +77,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
   return (
     <div>
       <div className="w-full bg-primary flex flex-col items-center shadow-sm rounded-xl px-6 py-4">
-        <div className="w-full flex items-center justify-between border-b pb-5 border-[#66666645]">
+        <div className="w-full flex flex-wrap items-center justify-between border-b pb-5 border-[#66666645]">
           <Link to={"/profile/" + user?._id} className="flex gap-2">
             <img
               src={user && user.profileUrl ? user.profileUrl : NoProfile}
@@ -100,7 +100,7 @@ const ProfileCard = ({ user, loggedInUser }) => {
               </span>
             </div>
           </Link>
-          <div className="ml-auto">
+          <div className="ml-auto md:ml-2 lg:ml-4 mt-4">
           <button style={{
               backgroundColor: "black",
               color: "white",

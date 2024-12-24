@@ -1,7 +1,7 @@
 function SkillProfilePills({skills}){
     return(
         <div>
-            <div className="flex gap-3 items-center">
+            <div className="flex flex-wrap gap-3 items-center">
                 {skills.map(skill=>{
                     return(
                         <div key={skill} style={{
