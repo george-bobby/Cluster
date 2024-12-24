@@ -26,7 +26,7 @@ dbConnection();
 app.use(helmet());
 app.use(
   cors({
-    origin: "http://localhost:8800",
+    origin: "https://cluster-client.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: false,
