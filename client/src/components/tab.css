@@ -1,0 +1,20 @@
+.tabs .tab-titles {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  .tab-titles .tab-title {
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .tab-titles .tab-title.active {
+    background-color: #ddd;
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  

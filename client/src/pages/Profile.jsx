@@ -27,7 +27,7 @@ const Profile = () => {
     const fetchUserProfile = async () => {
       try {
         const response = await axios.post(
-          `https://cluster-delta.onrender.com/users/get-user/${id}`
+          `http://localhost:8800/users/get-user/${id}`
         );
         setViewedUser(response.data.user);
         setIsFollowing(response.data.user.followers.includes(user._id));
@@ -85,20 +85,6 @@ const Profile = () => {
             {/* Pass loggedInUser as id to ProfileCard */}
             <ProfileCard user={viewedUser} loggedInUser={loggedInUser}  />
           </div>
-          <Link to="/" className="w-full">
-            <button
-              className="w-full"
-              style={{
-                height: "40px",
-                backgroundColor: "black",
-                color: "white",
-                borderRadius: "30px",
-                fontSize: "20px",
-              }}
-            >
-              Home
-            </button>
-          </Link>
         </div>
       )}
     </div>
