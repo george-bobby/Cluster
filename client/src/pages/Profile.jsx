@@ -85,20 +85,6 @@ const Profile = () => {
             {/* Pass loggedInUser as id to ProfileCard */}
             <ProfileCard user={viewedUser} loggedInUser={loggedInUser}  />
           </div>
-          <Link to="/" className="w-full">
-            <button
-              className="w-full"
-              style={{
-                height: "40px",
-                backgroundColor: "black",
-                color: "white",
-                borderRadius: "30px",
-                fontSize: "20px",
-              }}
-            >
-              Home
-            </button>
-          </Link>
         </div>
       )}
     </div>

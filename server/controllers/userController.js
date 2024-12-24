@@ -241,16 +241,59 @@ export const getUser = async (req, res, next) => {
 
 
 
+// export const updateUser = async (req, res, next) => {
+//   try {
+//     const { firstName, lastName, location, profileUrl, profession, skills } = req.body;
+
+//     if (!(firstName || lastName || profession || location)) {
+//       return res.status(400).json({ message: "Please provide all required fields" });
+//     }
+
+//     const { userId } = req.body.user;
+
+//     const updateUser = {
+//       firstName,
+//       lastName,
+//       location,
+//       profileUrl,
+//       profession,
+//       skills,
+//       _id: userId,
+//     };
+
+//     const user = await Users.findByIdAndUpdate(userId, updateUser, {
+//       new: true,
+//     });
+
+//     await user.populate({ path: "friends", select: "-password" }); 
+
+//     const token = createJWT(user._id); 
+
+//     user.password = undefined; 
+
+//     res.status(200).json({
+//       success: true,
+//       message: "User updated successfully",
+//       user,
+//       token,
+//     });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: error.message });
+//   }
+// };
 export const updateUser = async (req, res, next) => {
   try {
-    const { firstName, lastName, location, profileUrl, profession } = req.body;
+    const { firstName, lastName, location, profileUrl, profession, skills, userId } = req.body;
 
-    if (!(firstName || lastName || profession || location)) {
-      next("Please provide all required fields");
-      return;
+    // Validate userId
+    if (!userId) {
+      return res.status(400).json({ message: "User ID is missing." });
     }
 
-    const { userId } = req.body.user;
+    if (!(firstName || lastName || profession || location)) {
+      return res.status(400).json({ message: "Please provide all required fields" });
+    }
 
     const updateUser = {
       firstName,
@@ -258,28 +301,32 @@ export const updateUser = async (req, res, next) => {
       location,
       profileUrl,
       profession,
+      skills,
       _id: userId,
     };
+
     const user = await Users.findByIdAndUpdate(userId, updateUser, {
       new: true,
     });
 
-    await user.populate({ path: "friends", select: "-password" });
-    const token = createJWT(user?._id);
+    await user.populate({ path: "friends", select: "-password" }); 
 
-    user.password = undefined;
+    const token = createJWT(user._id); 
+
+    user.password = undefined; 
 
     res.status(200).json({
-      sucess: true,
+      success: true,
       message: "User updated successfully",
       user,
       token,
     });
   } catch (error) {
-    console.log(error);
-    res.status(404).json({ message: error.message });
+    console.error(error);
+    res.status(500).json({ message: error.message });
   }
 };
+
 
 export const friendRequest = async (req, res, next) => {
   try {

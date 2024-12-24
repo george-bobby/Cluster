@@ -31,7 +31,8 @@ const userSchema = new mongoose.Schema(
     tick: { type: Boolean, default: false },
     verified: { type: Boolean, default: true },
     following: [{ type: mongoose.Schema.Types.ObjectId, ref: "Users" }],
-    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "Users" }] 
+    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "Users" }],
+    skills: [{type:Array, default:[]}], 
     },
   { timestamps: true }
 );
