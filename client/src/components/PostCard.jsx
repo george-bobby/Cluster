@@ -141,7 +141,7 @@ const PostCard = ({ post, user, deletePost, likePost }) => {
 
   const handleLike = async () => {
     try {
-      const response = await axios.post("http://localhost:8800/users/like", {
+      const response = await axios.post("https://cluster-delta.onrender.com/users/like", {
         postId: post._id,
         userId: user._id,
       });

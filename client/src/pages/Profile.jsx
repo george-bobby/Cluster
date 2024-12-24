@@ -27,7 +27,7 @@ const Profile = () => {
     const fetchUserProfile = async () => {
       try {
         const response = await axios.post(
-          `http://localhost:8800/users/get-user/${id}`
+          `https://cluster-delta.onrender.com/users/get-user/${id}`
         );
         setViewedUser(response.data.user);
         setIsFollowing(response.data.user.followers.includes(user._id));

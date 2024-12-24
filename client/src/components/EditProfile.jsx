@@ -71,7 +71,7 @@ const EditProfile = ({ closeModal, userskills,userprof,userlocation,userprofileu
       }
       formData = JSON.stringify(formData);
       console.log(formData);
-      const response = await fetch("http://localhost:8800/users/update-user/", {
+      const response = await fetch("https://cluster-delta.onrender.com/users/update-user/", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${parsedToken.token}`,
